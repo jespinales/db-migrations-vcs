@@ -17,7 +17,7 @@ final class SchemaMigration extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function change(): void
+    public function up(): void
     {
         $sqlFile = __DIR__ . '/../database/sakila-schema.sql';
 
