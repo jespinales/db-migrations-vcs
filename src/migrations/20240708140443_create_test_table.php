@@ -17,12 +17,17 @@ final class CreateTestTable extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function change(): void
+    public function up(): void
     {
         $sqlFile = __DIR__ . '/../database/20240708_create_test_table.sql';
 
         $sql = file_get_contents($sqlFile);
 
         $this->execute($sql);
+    }
+
+    public function down(): void
+    {
+        $this->execute('DROP TABLE Test');
     }
 }
