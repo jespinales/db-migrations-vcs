@@ -19,7 +19,7 @@ final class SchemaMigration extends AbstractMigration
      */
     public function change(): void
     {
-        $sqlFile = __DIR__ . '/../database/schema/sakila-schema.sql';
+        $sqlFile = __DIR__ . '/../database/sakila-schema.sql';
 
         $sql = file_get_contents($sqlFile);
 

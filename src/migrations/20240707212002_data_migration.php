@@ -19,7 +19,7 @@ final class DataMigration extends AbstractMigration
      */
     public function up(): void
     {
-        $sqlFile = __DIR__ . '/../database/data/sakila-data.sql';
+        $sqlFile = __DIR__ . '/../database/sakila-data.sql';
 
         $sql = file_get_contents($sqlFile);
 
