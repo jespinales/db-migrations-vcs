@@ -28,13 +28,23 @@ Follow these instructions to install and configure the project:
     CREATE DATABASE sakila;
     ```
 
-5. **Run the initial migration**:
+5. **Start phinx**:
+    ```sh
+    vendor/bin/phinx init
+    ```
+
+6. **Copy the phinx.php.example configuration**:
+    ```sh
+    cp phinx.php.example phinx.php
+    ```
+
+7. **Run the initial migration**:
     ```sh
     # This will set up the initial database schema and populate it with the initial data.
     php vendor/bin/phinx migrate
     ```
 
-6. **Set the initial breakpoint**:
+8. **Set the initial breakpoint**:
     ```sh
     # This will establish a rollback point so that the initial schema and data are not deleted.
     php vendor/bin/phinx breakpoint
@@ -88,6 +98,8 @@ Breakpoints should be updated in the master branch once changes have been commit
 - Clone the repository.
 - Install dependencies.
 - Create database.
+- Start phinx
+- Copy the phinx.php.example configuration
 - Run the initial migration and set the breakpoint.
 - Use Git hooks and aliases to manage database state during merges and branch switches.
 - Keep breakpoints updated in the master branch to prevent major reversions.
